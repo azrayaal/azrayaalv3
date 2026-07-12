@@ -23,9 +23,12 @@ const matchesQuery = (project: Project, query: string) => {
   return haystack.includes(query);
 };
 
+/** Projects within a year have no finer ordering, so title breaks the tie. */
+const byYear = (a: Project, b: Project) => Number(b.year) - Number(a.year);
+
 const comparators: Record<ProjectSort, (a: Project, b: Project) => number> = {
-  newest: (a, b) => Date.parse(b.publishedDate) - Date.parse(a.publishedDate),
-  oldest: (a, b) => Date.parse(a.publishedDate) - Date.parse(b.publishedDate),
+  newest: (a, b) => byYear(a, b) || a.title.localeCompare(b.title),
+  oldest: (a, b) => byYear(b, a) || a.title.localeCompare(b.title),
   'a-z': (a, b) => a.title.localeCompare(b.title),
 };
 

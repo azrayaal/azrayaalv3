@@ -11,12 +11,14 @@ export type AccentColor = 'brand' | 'blue' | 'pink' | 'teal' | 'orange' | 'cyan'
 export type ProjectStatus = 'live' | 'in-progress' | 'archived' | 'concept';
 
 export type ProjectCategory =
-  | 'Web App'
-  | 'Mobile App'
-  | 'Design System'
-  | 'Developer Tool'
-  | 'Platform'
-  | 'AI / ML';
+  | 'Corporate Website'
+  | 'Dashboard'
+  | 'Booking System'
+  | 'HRIS'
+  | 'Warehouse Management'
+  | 'E-Commerce'
+  | 'Membership';
+
 
 export interface ProjectLinks {
   github?: string;
@@ -41,6 +43,12 @@ export interface ArchitectureLayer {
   detail: string;
 }
 
+/**
+ * Only the fields every project genuinely has are required. The case-study
+ * fields below them are optional: a project renders those sections when the
+ * content exists and silently drops them when it does not, so a half-documented
+ * project never shows an empty heading.
+ */
 export interface Project {
   id: string;
   slug: string;
@@ -50,33 +58,31 @@ export interface Project {
 
   thumbnail: string;
   coverImage: string;
-  images: string[];
-  gallery: GalleryImage[];
 
   category: ProjectCategory;
   status: ProjectStatus;
   featured: boolean;
 
-  publishedDate: string; // ISO 8601
-  lastUpdated: string; // ISO 8601
+  /** Calendar year the work shipped, e.g. "2026". Drives sorting and display. */
+  year: string;
 
   techStack: string[];
-  features: ProjectFeature[];
-  highlights: string[];
   tags: string[];
 
   role: string;
-  duration: string;
-  teamSize: number;
-
   links: ProjectLinks;
-
-  problem: string;
-  solution: string;
-  result: string;
-  architecture: ArchitectureLayer[];
-
   color: AccentColor;
+
+  // ── Optional case-study detail ───────────────────────────────────────
+  duration?: string;
+  teamSize?: number;
+  gallery?: GalleryImage[];
+  features?: ProjectFeature[];
+  highlights?: string[];
+  problem?: string;
+  solution?: string;
+  result?: string;
+  architecture?: ArchitectureLayer[];
 }
 
 export type SkillCategory =
@@ -126,15 +132,6 @@ export interface Education {
   startYear: string;
   endYear: string;
   description: string;
-}
-
-export interface Achievement {
-  id: string;
-  title: string;
-  issuer: string;
-  year: string;
-  description: string;
-  icon: string;
 }
 
 export interface Statistic {

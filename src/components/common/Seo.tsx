@@ -22,7 +22,7 @@ export function Seo({
   type = 'website',
   structuredData,
 }: SeoProps) {
-  const fullTitle = title ? `${title} — ${siteMeta.siteName}` : siteMeta.defaultTitle;
+  const fullTitle = title ? `${title} | ${siteMeta.siteName}` : siteMeta.defaultTitle;
   const url = `${siteMeta.url}${path}`;
 
   return (

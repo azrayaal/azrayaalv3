@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import type { Skill } from '@/types';
-import { Button, Icon, ProgressBar, RevealGroup, RevealItem, Section, SectionTitle } from '@/components/ui';
+import { Button, Icon, RevealGroup, RevealItem, Section, SectionTitle } from '@/components/ui';
 import { accentText } from '@/utils/accent';
 import { cn } from '@/utils/cn';
 
@@ -42,12 +42,12 @@ export function FeaturedSkills({ skills }: FeaturedSkillsProps) {
                 <h3 className="text-sm font-semibold text-fg-strong">{skill.name}</h3>
               </div>
 
-              <span className="font-mono text-[11px] text-fg-subtle">
+              {/* <span className="font-mono text-[11px] text-fg-subtle">
                 {skill.years}y · {skill.level}
-              </span>
+              </span> */}
             </div>
 
-            <ProgressBar value={skill.level} color={skill.color} label={`${skill.name} proficiency`} />
+            {/* <ProgressBar value={skill.level} color={skill.color} label={`${skill.name} proficiency`} /> */}
           </RevealItem>
         ))}
       </RevealGroup>

@@ -1,15 +1,13 @@
 import { ArrowRight } from 'lucide-react';
 import type { Profile } from '@/types';
-import { Marquee, StatGrid } from '@/components/common';
+import { StatGrid } from '@/components/common';
 import { Button, Reveal, Section } from '@/components/ui';
 
 interface AboutPreviewProps {
   profile: Profile;
-  /** Rendered as a ticker under the intro — usually the top technologies. */
-  ticker: string[];
 }
 
-export function AboutPreview({ profile, ticker }: AboutPreviewProps) {
+export function AboutPreview({ profile }: AboutPreviewProps) {
   const [intro] = profile.bio;
 
   return (
@@ -43,8 +41,6 @@ export function AboutPreview({ profile, ticker }: AboutPreviewProps) {
       <Reveal className="mt-16 lg:mt-20">
         <StatGrid stats={profile.statistics} />
       </Reveal>
-
-      {/* <Marquee items={ticker} className="mt-8" /> */}
     </Section>
   );
 }

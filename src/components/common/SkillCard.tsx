@@ -1,5 +1,5 @@
 import type { Skill } from '@/types';
-import { Icon, ProgressBar } from '@/components/ui';
+import { Icon } from '@/components/ui';
 import { accentText } from '@/utils/accent';
 import { cn } from '@/utils/cn';
 

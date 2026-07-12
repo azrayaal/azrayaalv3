@@ -35,7 +35,7 @@ export const getRelatedProjects = (project: Project, limit = 3): Project[] =>
 /** Previous/next in publication order, for detail-page navigation. */
 export const getAdjacentProjects = (slug: string) => {
   const ordered = [...projects].sort(
-    (a, b) => Date.parse(b.publishedDate) - Date.parse(a.publishedDate),
+    (a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title),
   );
   const index = ordered.findIndex((project) => project.slug === slug);
 

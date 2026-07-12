@@ -2,14 +2,13 @@ import { Download, Mail } from 'lucide-react';
 import { PageHeader, Seo, StatGrid, Timeline } from '@/components/common';
 import {
   Button,
-  Icon,
   Reveal,
   RevealGroup,
   RevealItem,
   Section,
   SectionTitle,
 } from '@/components/ui';
-import { achievements, education, experiences, profile } from '@/data';
+import { education, experiences, profile } from '@/data';
 
 export default function About() {
   return (
@@ -141,41 +140,6 @@ export default function About() {
         </RevealGroup>
       </Section>
 
-      {/* <Section bordered aria-labelledby="achievements-heading">
-        <SectionTitle
-          id="achievements-heading"
-          eyebrow="Recognition"
-          title="Achievements"
-          description="Awards, talks, and the occasional certificate that meant something."
-        />
-
-        <RevealGroup as="ul" className="grid gap-px border border-line bg-line md:grid-cols-2">
-          {achievements.map((item) => (
-            <RevealItem
-              as="li"
-              key={item.id}
-              className="group flex gap-5 bg-bg p-6 transition-colors duration-300 hover:bg-surface lg:p-8"
-            >
-              <span className="flex size-10 shrink-0 items-center justify-center rounded-xs border border-line bg-surface-2 text-fg-muted transition-colors duration-300 group-hover:text-brand">
-                <Icon name={item.icon} size={18} />
-              </span>
-
-              <div className="flex flex-col gap-2">
-                <div className="flex flex-wrap items-baseline gap-x-3">
-                  <h3 className="text-base font-semibold text-fg-strong">{item.title}</h3>
-                  <span className="font-mono text-[11px] text-fg-subtle">{item.year}</span>
-                </div>
-
-                <p className="font-mono text-[11px] uppercase tracking-[1.2px] text-fg-muted">
-                  {item.issuer}
-                </p>
-
-                <p className="text-sm leading-6 text-fg-muted">{item.description}</p>
-              </div>
-            </RevealItem>
-          ))}
-        </RevealGroup>
-      </Section> */}
     </>
   );
 }

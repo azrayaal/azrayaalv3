@@ -58,6 +58,12 @@ Two techniques worth knowing:
 
 Semantic landmarks, a skip link, 44px minimum touch targets, labelled controls, `aria-live` result counts, and a cyan double-ring focus indicator on every interactive element. Every animation has a designed reduced-motion path — `prefers-reduced-motion` renders content statically rather than hiding it.
 
+## Project shape
+
+A project only has to declare what it actually has. Required: `title`, `shortDescription`, `description`, `category`, `status`, `year`, `role`, `techStack`, `tags`, `color`. Everything else is optional — `duration`, `teamSize`, `links`, `highlights`, `features`, `problem` / `solution` / `result`, `architecture`, `gallery`.
+
+The detail page renders each of those sections **only when its data exists**, so a lightly documented project never shows an empty heading. Add a `problem`/`solution`/`result` to a project and the case-study narrative appears; add `architecture` and the layer breakdown appears. Nothing to configure.
+
 ## Notes
 
 - Images are deterministic grayscale placeholders (`picsum.photos`) derived from each project slug. Replace `media()` in `src/data/portfolio.ts` with real asset URLs.

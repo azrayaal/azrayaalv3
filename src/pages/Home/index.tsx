@@ -6,7 +6,6 @@ import {
   profile,
   projects,
   siteMeta,
-  skills,
   socialLinks,
 } from '@/data';
 import { AboutPreview } from './sections/AboutPreview';
@@ -19,13 +18,10 @@ import { Hero } from './sections/Hero';
 const HOME_LATEST_COUNT = 3;
 const HOME_EXPERIENCE_COUNT = 3;
 const HOME_SKILL_COUNT = 9;
-const TICKER_COUNT = 16;
 
 const latestProjects = [...projects]
-  .sort((a, b) => Date.parse(b.publishedDate) - Date.parse(a.publishedDate))
+  .sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title))
   .slice(0, HOME_LATEST_COUNT);
-
-const ticker = skills.slice(0, TICKER_COUNT).map((skill) => skill.name);
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -44,7 +40,7 @@ export default function Home() {
       <Seo structuredData={structuredData} />
 
       <Hero profile={profile} projectCount={projects.length} />
-      <AboutPreview profile={profile} ticker={ticker} />
+      <AboutPreview profile={profile} />
       <FeaturedWork featured={featuredProjects} latest={latestProjects} />
       <FeaturedSkills skills={featuredSkills.slice(0, HOME_SKILL_COUNT)} />
       <ExperiencePreview experiences={experiences.slice(0, HOME_EXPERIENCE_COUNT)} />

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import type { Project } from '@/types';
 import { TagList } from '@/components/ui';
 import { StatusBadge } from './StatusBadge';
-import { formatIndex, formatYear } from '@/utils/format';
+import { formatIndex } from '@/utils/format';
 import { cn } from '@/utils/cn';
 
 interface ProjectCardProps {
@@ -65,7 +65,7 @@ export function ProjectCard({ project, index, className }: ProjectCardProps) {
         <footer className="flex items-center justify-between border-t border-line pt-4">
           <StatusBadge status={project.status} />
           <span className="font-mono text-[11px] text-fg-subtle">
-            {formatYear(project.publishedDate)}
+            {project.year}
           </span>
         </footer>
       </div>

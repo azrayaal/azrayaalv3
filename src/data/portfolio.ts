@@ -1,6 +1,6 @@
-import type { Achievement, ContactChannel, Education, NavItem, Profile } from '@/types';
+import type { ContactChannel, Education, NavItem, Profile } from '@/types';
 
-/** Deterministic monochrome placeholders — swap for CMS media URLs later. */
+/** Deterministic monochrome placeholders | swap for CMS media URLs later. */
 export const media = (seed: string, w = 1600, h = 900) =>
   `https://picsum.photos/seed/${seed}/${w}/${h}?grayscale`;
 
@@ -20,11 +20,11 @@ export const profile: Profile = {
   location: 'Jakarta, Indonesia',
   timezone: 'GMT+7',
   email: 'hello@azrayaal.dev',
-  availability: 'Available for select engagements — Q3 2026',
+  availability: 'Available for select engagements | Q3 2026',
   available: true,
   experienceSince: '2022',
   resumeUrl: '/Azra-Yazid-resume.pdf',
-  avatar: media('azra-portrait', 900, 1100),
+  avatar: '/azra.jpeg',
   statistics: [
     {
       id: 'stat-years',
@@ -80,50 +80,6 @@ export const education: Education[] = [
   },
 ];
 
-export const achievements: Achievement[] = [
-  {
-    id: 'ach-1',
-    title: 'Core Web Vitals — 98th percentile',
-    issuer: 'Northwind Commerce',
-    year: '2025',
-    description:
-      'Led the rendering rewrite that moved LCP from 4.1s to 1.2s across 12M monthly sessions.',
-    icon: 'Gauge',
-  },
-  {
-    id: 'ach-2',
-    title: 'Open source — 14k stars',
-    issuer: 'Community',
-    year: '2024',
-    description: 'Maintainer of two libraries in the React ecosystem with production adopters.',
-    icon: 'Star',
-  },
-  {
-    id: 'ach-3',
-    title: 'Speaker, JSConf Asia',
-    issuer: 'JSConf',
-    year: '2024',
-    description: '"Design systems that survive contact with the roadmap" — 900 attendees.',
-    icon: 'Mic',
-  },
-  {
-    id: 'ach-4',
-    title: 'Accessibility award',
-    issuer: 'Fintech Guild SEA',
-    year: '2023',
-    description: 'First WCAG 2.2 AA certified banking interface in the region.',
-    icon: 'Accessibility',
-  },
-  {
-    id: 'ach-5',
-    title: 'Engineering Excellence',
-    issuer: 'Lumen Labs',
-    year: '2022',
-    description: 'Internal award for the CI/CD overhaul that cut deploy time by 76%.',
-    icon: 'Award',
-  },
-];
-
 export const contactChannels: ContactChannel[] = [
   {
     id: 'contact-email',
@@ -142,7 +98,7 @@ export const contactChannels: ContactChannel[] = [
   {
     id: 'contact-location',
     label: 'Based in',
-    value: 'Jakarta, Indonesia — GMT+7',
+    value: 'Jakarta, Indonesia | GMT+7',
     href: 'https://maps.google.com/?q=Jakarta',
     icon: 'MapPin',
   },
@@ -156,11 +112,11 @@ export const primaryNav: NavItem[] = [
 ];
 
 export const siteMeta = {
-  siteName: 'Azra Yaal',
+  siteName: 'azrayaal',
   url: 'https://azrayaal.dev',
-  defaultTitle: 'Azra Yaal — Product Engineer',
+  defaultTitle: 'azrayaal | Full Stack Developer',
   defaultDescription:
-    'Product engineer building fast, accessible, durable interfaces. Design systems, rendering performance, and frontend platform work.',
+    'I build scalable web applications from frontend to backend, focusing on performance, maintainability, and user experience.',
   ogImage: media('azra-og', 1200, 630),
   twitter: '@azrayaal',
 } as const;

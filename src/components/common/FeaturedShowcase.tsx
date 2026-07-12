@@ -115,7 +115,9 @@ export function FeaturedShowcase({ projects }: FeaturedShowcaseProps) {
 
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-bg to-transparent p-6 pt-16">
           <p className="font-mono text-[11px] uppercase tracking-[1.2px] text-fg-muted">
-            {active.duration} · {active.teamSize} people
+            {[active.year, active.teamSize && `${active.teamSize} people`]
+              .filter(Boolean)
+              .join(' · ')}
           </p>
           <p className="mt-2 text-sm leading-6 text-fg">{active.shortDescription}</p>
         </div>
