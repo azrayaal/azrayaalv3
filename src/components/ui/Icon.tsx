@@ -1,0 +1,116 @@
+import {
+  Accessibility,
+  Activity,
+  Apple,
+  Atom,
+  Award,
+  BarChart3,
+  Blocks,
+  BookOpen,
+  Box,
+  Boxes,
+  Braces,
+  CalendarDays,
+  Circle,
+  Cloud,
+  CloudCog,
+  CloudLightning,
+  Cog,
+  Component,
+  Container,
+  Database,
+  Download,
+  FileCode2,
+  FlaskConical,
+  Gauge,
+  GitBranch,
+  GitMerge,
+  Hexagon,
+  Layers,
+  Lightbulb,
+  Mail,
+  MapPin,
+  Mic,
+  MousePointerClick,
+  Network,
+  Palette,
+  PenTool,
+  Rocket,
+  ScanEye,
+  Share2,
+  Ship,
+  Smartphone,
+  Sparkles,
+  Star,
+  Table2,
+  Triangle,
+  Wind,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
+
+/**
+ * Explicit registry rather than a namespace import: data supplies icons by
+ * name, and this keeps the bundle to the icons we actually ship.
+ */
+const registry: Record<string, LucideIcon> = {
+  Accessibility,
+  Activity,
+  Apple,
+  Atom,
+  Award,
+  BarChart3,
+  Blocks,
+  BookOpen,
+  Box,
+  Boxes,
+  Braces,
+  CalendarDays,
+  Cloud,
+  CloudCog,
+  CloudLightning,
+  Cog,
+  Component,
+  Container,
+  Database,
+  Download,
+  FileCode2,
+  FlaskConical,
+  Gauge,
+  GitBranch,
+  GitMerge,
+  Hexagon,
+  Layers,
+  Lightbulb,
+  Mail,
+  MapPin,
+  Mic,
+  MousePointerClick,
+  Network,
+  Palette,
+  PenTool,
+  Rocket,
+  ScanEye,
+  Share2,
+  Ship,
+  Smartphone,
+  Sparkles,
+  Star,
+  Table2,
+  Triangle,
+  Wind,
+  Zap,
+};
+
+interface IconProps {
+  name: string;
+  className?: string;
+  size?: number;
+  strokeWidth?: number;
+}
+
+export function Icon({ name, className, size = 16, strokeWidth = 1.5 }: IconProps) {
+  const Glyph = registry[name] ?? Circle;
+
+  return <Glyph aria-hidden size={size} strokeWidth={strokeWidth} className={className} />;
+}
