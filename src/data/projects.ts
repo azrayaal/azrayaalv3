@@ -324,12 +324,12 @@ export const projects: Project[] = [
   slug: 'kamitolong',
   title: 'KamiTolong',
   shortDescription:
-    'A donation and social fundraising platform connecting donors with charitable initiatives.',
+    'A digital platform for advertising and discovering professional services.',
   description:
-    'KamiTolong is a digital fundraising platform that enables organizations and individuals to manage donation campaigns, collect contributions securely, and monitor campaign progress. I developed the frontend application with a focus on accessibility, responsive design, and intuitive user flows.',
+    'KamiTolong is a service marketplace that connects customers with professional service providers across various categories. Users can browse service listings, compare providers, publish advertisements, and connect directly with businesses or freelancers. I developed the frontend application with a strong focus on responsive design, intuitive navigation, and a seamless user experience.',
   thumbnail: '/projects/kamitolong.png',
   coverImage: '/projects/kamitolong.png',
-  category: 'Donation Platform',
+  category: 'Service Marketplace',
   status: 'live',
   featured: false,
   year: '2025',
