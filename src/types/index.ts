@@ -17,7 +17,11 @@ export type ProjectCategory =
   | 'HRIS'
   | 'Warehouse Management'
   | 'E-Commerce'
-  | 'Membership';
+  | 'Membership'
+  | 'Donation Platform'
+  | 'Enterprise Dashboard'
+  | 'Ticketing'
+  | 'Digital Commerce';
 
 
 export interface ProjectLinks {
