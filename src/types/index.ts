@@ -18,7 +18,7 @@ export type ProjectCategory =
   | 'Warehouse Management'
   | 'E-Commerce'
   | 'Membership'
-  | 'Donation Platform'
+  | 'Service Marketplace'
   | 'Enterprise Dashboard'
   | 'Ticketing'
   | 'Digital Commerce';
