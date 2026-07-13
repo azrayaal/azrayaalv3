@@ -84,8 +84,8 @@ export const contactChannels: ContactChannel[] = [
   {
     id: 'contact-email',
     label: 'Email',
-    value: 'hello@azrayaal.dev',
-    href: 'mailto:hello@azrayaal.dev',
+    value: 'azrayazidalkautsar@gmail.com',
+    href: 'mailto:azrayazidalkautsar@gmail.com',
     icon: 'Mail',
   },
   {

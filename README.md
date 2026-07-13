@@ -64,6 +64,28 @@ A project only has to declare what it actually has. Required: `title`, `shortDes
 
 The detail page renders each of those sections **only when its data exists**, so a lightly documented project never shows an empty heading. Add a `problem`/`solution`/`result` to a project and the case-study narrative appears; add `architecture` and the layer breakdown appears. Nothing to configure.
 
+## Contact form
+
+The form posts to `api/contact.ts`, a Vercel serverless function that relays the message over SMTP using **your own Gmail account** — no third-party mail service, and no credential ever reaches the browser.
+
+**Setup (once):**
+
+1. Turn on 2-Step Verification on the Google account you want to send from.
+2. Create an App Password at <https://myaccount.google.com/apppasswords> (16 characters — this is *not* your account password).
+3. In Vercel → Project → Settings → **Environment Variables**, add:
+
+   | Key | Value |
+   | --- | --- |
+   | `MAIL_USER` | the Gmail address that sends the mail |
+   | `MAIL_APP_PASSWORD` | the App Password from step 2 |
+   | `MAIL_TO` | *(optional)* where enquiries land; defaults to `MAIL_USER` |
+
+4. Redeploy. Without these variables the endpoint returns a 500 and the form shows a failure message with a direct mailto fallback.
+
+The visitor's address goes in `Reply-To`, so hitting reply in Gmail answers them directly. A hidden honeypot field silently drops bot submissions.
+
+**Local development:** `npm run dev` (Vite) does not run the `api/` function, so submitting locally will 404. Use `npx vercel dev` with a `.env` file (see `.env.example`) to exercise the endpoint end to end.
+
 ## Notes
 
 - Images are deterministic grayscale placeholders (`picsum.photos`) derived from each project slug. Replace `media()` in `src/data/portfolio.ts` with real asset URLs.
