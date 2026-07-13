@@ -292,6 +292,203 @@ export const projects: Project[] = [
     links: {},
     color: 'blue',
   },
+{
+  id: 'prj-13',
+  slug: 'searah',
+  title: 'Searah',
+  shortDescription:
+    'Corporate website for Searah, a strategic upstream energy joint venture between Eni and PETRONAS.',
+  description:
+    'A modern corporate website developed for Searah to showcase the company profile, leadership, operations, and strategic partnership between Eni and PETRONAS. I implemented responsive interfaces, optimized performance, and built reusable React components while ensuring the site aligned with the company’s enterprise branding.',
+  thumbnail: '/projects/searah.png',
+  coverImage: '/projects/searah.png',
+  category: 'Corporate Website',
+  status: 'live',
+  featured: true,
+  year: '2026',
+  role: 'Frontend Developer',
+  duration: '2026',
+  teamSize: 4,
+  techStack: [
+    'React',
+    'TypeScript',
+    'Tailwind CSS',
+    'Vite'
+  ],
+  tags: ['corporate', 'energy', 'frontend'],
+  links: {},
+  color: 'brand',
+},
+{
+  id: 'prj-14',
+  slug: 'kamitolong',
+  title: 'KamiTolong',
+  shortDescription:
+    'A donation and social fundraising platform connecting donors with charitable initiatives.',
+  description:
+    'KamiTolong is a digital fundraising platform that enables organizations and individuals to manage donation campaigns, collect contributions securely, and monitor campaign progress. I developed the frontend application with a focus on accessibility, responsive design, and intuitive user flows.',
+  thumbnail: '/projects/kamitolong.png',
+  coverImage: '/projects/kamitolong.png',
+  category: 'Donation Platform',
+  status: 'live',
+  featured: false,
+  year: '2025',
+  role: 'Frontend Developer',
+  techStack: [
+    'Vue 3',
+    'TypeScript',
+    'Tailwind CSS',
+    'Laravel'
+  ],
+  tags: ['donation', 'charity', 'frontend'],
+  links: {},
+  color: 'teal',
+},
+{
+  id: 'prj-15',
+  slug: 'petrokimia',
+  title: 'Petrokimia',
+  shortDescription:
+    'Enterprise dashboard for operational reporting and business process management.',
+  description:
+    'An internal enterprise application developed to support operational reporting and business workflows. The project focused on presenting complex business data through dashboards while maintaining performance, usability, and responsive layouts.',
+  thumbnail: '/projects/petrokimia.png',
+  coverImage: '/projects/petrokimia.png',
+  category: 'Enterprise Dashboard',
+  status: 'live',
+  featured: false,
+  year: '2025',
+  role: 'Frontend Developer',
+  techStack: [
+    'Vue 3',
+    'TypeScript',
+    'Laravel',
+    'MySQL'
+  ],
+  tags: ['dashboard', 'enterprise', 'reporting'],
+  links: {},
+  color: 'blue',
+},
+{
+  id: 'prj-16',
+  slug: 'paska',
+  title: 'Paska',
+  shortDescription:
+    'Corporate website and digital presence for a business services company.',
+  description:
+    'A responsive corporate website designed to strengthen the company’s digital presence. The project focused on presenting services, company information, and contact channels with a clean and modern interface.',
+  thumbnail: '/projects/paska.png',
+  coverImage: '/projects/paska.png',
+  category: 'Corporate Website',
+  status: 'live',
+  featured: false,
+  year: '2025',
+  role: 'Frontend Developer',
+  techStack: [
+    'React',
+    'TypeScript',
+    'Tailwind CSS'
+  ],
+  tags: ['corporate', 'website'],
+  links: {},
+  color: 'cyan',
+},
+{
+  id: 'prj-17',
+  slug: 'xl-axiata',
+  title: 'XL Axiata',
+  shortDescription:
+    'Enterprise dashboard for monitoring and operational management.',
+  description:
+    'A web-based enterprise dashboard built to support operational monitoring and internal business processes. The application provides data visualization, reporting features, and responsive interfaces for internal users.',
+  thumbnail: '/projects/xl-axiata.png',
+  coverImage: '/projects/xl-axiata.png',
+  category: 'Enterprise Dashboard',
+  status: 'live',
+  featured: false,
+  year: '2025',
+  role: 'Frontend Developer',
+  techStack: [
+    'Vue 3',
+    'TypeScript',
+    'Laravel'
+  ],
+  tags: ['dashboard', 'enterprise'],
+  links: {},
+  color: 'brand',
+},
+{
+  id: 'prj-18',
+  slug: 'ticketing',
+  title: 'Ticketing Platform',
+  shortDescription:
+    'Online event ticketing platform with booking and payment workflows.',
+  description:
+    'A digital ticketing platform allowing users to browse events, purchase tickets, and manage bookings. The application emphasizes smooth checkout flows, responsive UI, and secure transaction handling.',
+  thumbnail: '/projects/ticketing.png',
+  coverImage: '/projects/ticketing.png',
+  category: 'Ticketing',
+  status: 'in-progress',
+  featured: false,
+  year: '2026',
+  role: 'Frontend Developer',
+  techStack: [
+    'React',
+    'TypeScript',
+    'Tailwind CSS'
+  ],
+  tags: ['ticketing', 'booking'],
+  links: {},
+  color: 'orange',
+},
+{
+  id: 'prj-19',
+  slug: 'topup',
+  title: 'TopUp Platform',
+  shortDescription:
+    'Digital top-up platform for games, e-wallets, and prepaid services.',
+  description:
+    'A web application enabling users to purchase digital products including game vouchers, prepaid credits, and e-wallet top-ups. The project focused on user experience, transaction flow, and responsive interfaces.',
+  thumbnail: '/projects/topup.png',
+  coverImage: '/projects/topup.png',
+  category: 'Digital Commerce',
+  status: 'in-progress',
+  featured: false,
+  year: '2026',
+  role: 'Frontend Developer',
+  techStack: [
+    'React',
+    'TypeScript',
+    'Tailwind CSS'
+  ],
+  tags: ['commerce', 'payment'],
+  links: {},
+  color: 'pink',
+},
+{
+  id: 'prj-20',
+  slug: 'starcom',
+  title: 'Starcom',
+  shortDescription:
+    'Corporate website and digital platform for business services.',
+  description:
+    'A modern corporate website built to showcase company services, strengthen online presence, and provide an engaging user experience across desktop and mobile devices.',
+  thumbnail: '/projects/starcom.png',
+  coverImage: '/projects/starcom.png',
+  category: 'Corporate Website',
+  status: 'live',
+  featured: false,
+  year: '2025',
+  role: 'Frontend Developer',
+  techStack: [
+    'React',
+    'TypeScript',
+    'Tailwind CSS'
+  ],
+  tags: ['corporate', 'website'],
+  links: {},
+  color: 'teal',
+}
 ];
 
 export const projectCategories = [
