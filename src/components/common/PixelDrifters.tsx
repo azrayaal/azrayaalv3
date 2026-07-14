@@ -78,7 +78,7 @@ export function PixelDrifters({ className }: PixelDriftersProps) {
                 }
           }
         >
-          <Sprite size={drifter.size} />
+          <Sprite />
         </motion.div>
       ))}
     </div>
