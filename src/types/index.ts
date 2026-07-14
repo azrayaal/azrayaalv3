@@ -62,10 +62,19 @@ export interface Project {
 
   thumbnail: string;
   coverImage: string;
+  contentImage: string[];
+
 
   category: ProjectCategory;
   status: ProjectStatus;
   featured: boolean;
+
+  /**
+   * Position in the featured list — 1 renders first, then 2, and so on.
+   * A featured project without one falls to the end of the list in the order it
+   * is declared, so adding a project never silently reshuffles the ones above it.
+   */
+  featuredOrder?: number;
 
   /** Calendar year the work shipped, e.g. "2026". Drives sorting and display. */
   year: string;

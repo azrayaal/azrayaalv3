@@ -103,7 +103,7 @@ export function FeaturedShowcase({ projects }: FeaturedShowcaseProps) {
         <AnimatePresence mode="popLayout" initial={false}>
           <motion.img
             key={active.id}
-            src={active.coverImage}
+            src={active.thumbnail}
             alt=""
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}

@@ -19,7 +19,7 @@ export const profile: Profile = {
   ],
   location: 'Jakarta, Indonesia',
   timezone: 'GMT+7',
-  email: 'hello@azrayaal.dev',
+  email: 'azrayazidalkautsar@gmail.com',
   availability: 'Available for select engagements | Q3 2026',
   available: true,
   experienceSince: '2022',

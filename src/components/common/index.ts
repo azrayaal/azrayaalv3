@@ -1,4 +1,5 @@
 export { FeaturedShowcase } from './FeaturedShowcase';
+export { ImageCarousel } from './ImageCarousel';
 export { ImageGallery } from './ImageGallery';
 export { Marquee } from './Marquee';
 export { PageHeader } from './PageHeader';

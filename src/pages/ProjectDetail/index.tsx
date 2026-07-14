@@ -11,6 +11,7 @@ import {
 import { Link, useParams } from 'react-router-dom';
 import type { Project, ProjectLinks } from '@/types';
 import {
+  ImageCarousel,
   ImageGallery,
   ProjectCard,
   Seo,
@@ -71,6 +72,7 @@ export default function ProjectDetail() {
   const architecture = project.architecture ?? [];
   const features = project.features ?? [];
   const gallery = project.gallery ?? [];
+  const contentImages = project.contentImage ?? [];
 
   return (
     <>
@@ -146,15 +148,13 @@ export default function ProjectDetail() {
           </Reveal>
         </Container>
 
-        <Container>
-          <Reveal variant="scaleIn" className="overflow-hidden rounded-md border border-line bg-surface">
-            <img
-              src={project.coverImage}
-              alt={`${project.title} — cover`}
-              className="aspect-[2/1] w-full object-cover opacity-90"
-            />
-          </Reveal>
-        </Container>
+        {contentImages.length > 0 && (
+          <Container>
+            <Reveal variant="scaleIn">
+              <ImageCarousel images={contentImages} alt={`${project.title} — cover`} />
+            </Reveal>
+          </Container>
+        )}
 
         <Container className="py-12">
           {/* Hairlines come from each cell's own border rather than a gap over a

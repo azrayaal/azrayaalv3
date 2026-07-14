@@ -21,13 +21,13 @@ export function ProjectCard({ project, index, className }: ProjectCardProps) {
         className,
       )}
     >
-      <div className="relative aspect-[16/10] overflow-hidden border-b border-line bg-surface-2">
+      <div className="relative  overflow-hidden border-b border-line bg-surface-2">
         <img
-          src={project.thumbnail}
+          src={project.coverImage}
           alt={`${project.title} — ${project.shortDescription}`}
           loading="lazy"
           decoding="async"
-          className="size-full object-cover opacity-70 transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] group-hover:opacity-100"
+          className="size-full object-contain opacity-70 transition-[transform,opacity] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] group-hover:opacity-100"
         />
 
         {index !== undefined && (
