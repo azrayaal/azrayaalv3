@@ -18,20 +18,40 @@ const drifters = [
  */
 function Sprite({ size }: { size: number }) { 
   return (
- <svg
-      width={size}
-      height={size}
-      viewBox="0 0 12 12"
-      fill="none"
-      aria-hidden
-      shapeRendering="crispEdges"
-      className="text-fg-subtle"
-    >
-      <path d="M2 1h8v9H2V1z" fill="currentColor" fillOpacity="0.35" />
-      <path d="M2 1h8v1H2V1zM2 10h8v1H2v-1zM1 2h1v8H1V2zM10 2h1v8h-1V2z" fill="currentColor" />
-      <path d="M4 4h1v2H4V4zM7 4h1v2H7V4z" fill="var(--color-bg)" />
-      <path d="M0 3h1v2H0V3zM11 3h1v2h-1V3zM3 11h1v1H3v-1zM8 11h1v1H8v-1z" fill="currentColor" />
-    </svg>
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 12 12"
+    fill="none"
+    aria-hidden
+    shapeRendering="crispEdges"
+    className="text-fg-subtle"
+  >
+    {/* Body */}
+    <path
+      d="M2 1h8v9H2V1z"
+      fill="currentColor"
+      fillOpacity="0.35"
+    />
+
+    {/* Border */}
+    <path
+      d="M2 1h8v1H2V1zM2 10h8v1H2v-1zM1 2h1v8H1V2zM10 2h1v8h-1V2z"
+      fill="currentColor"
+    />
+
+    {/* Eyes */}
+    <path
+      d="M4 4h1v2H4V4zM7 4h1v2H7V4z"
+      fill="var(--color-bg)"
+    />
+
+    {/* Arms & Legs */}
+    <path
+      d="M0 3h1v2H0V3zM11 3h1v2h-1V3zM3 11h1v1H3v-1zM8 11h1v1H8v-1z"
+      fill="#5B21B6"
+    />
+  </svg>
   );
 }
 
@@ -70,7 +90,7 @@ export function PixelDrifters({ className }: PixelDriftersProps) {
                 }
           }
         >
-          <Sprite size={drifters.size}/>
+          <Sprite size={drifter.size} />
         </motion.div>
       ))}
     </div>
