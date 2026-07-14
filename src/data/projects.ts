@@ -18,7 +18,7 @@ export const projects: Project[] = [
     description:
       'Sarga is the parent corporate website tying the group’s sub-brands together. I worked across the stack: the marketing front end, the content and enquiry APIs behind it, and the deployment pipeline on Vercel. The site is the first thing a prospective partner sees, so the priorities were fast first paint, clean typography, and content that a non-engineer can update without a release.',
     thumbnail: '/projects/sarga_thumbnail.png',
-    contentImage: ['/projects/sarga.png', '/projects/sarga_horse.png'],  
+    contentImage: ['/projects/sarga.png', '/projects/sarga2.png', '/projects/sarga3.png', '/projects/sarga4.png'],
     coverImage: '/projects/sarga.png',
     category: 'Corporate Website',
     status: 'in-progress',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     description:
       'One of the Sarga sub-brand sites. It reuses the component foundation from the main site, which means a change to a shared primitive lands everywhere at once instead of being reimplemented per brand. My work covered the front end: layout, motion, responsive behaviour, and the content structure the marketing team edits.',
     thumbnail: '/projects/sarga_horse.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ["/projects/sarga_horse.png", "/projects/sarga_horse2.png", "/projects/sarga_horse4.png"],
     coverImage: "/projects/sarga_horse.png",
     category: 'Corporate Website',
     status: 'in-progress',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
     description:
       'The motorsport counterpart to the horse racing site. Same foundation, different identity: the shared primitives carry the structure while the brand layer changes the typography, imagery, and motion. Building the two in parallel is what proved the shared foundation was worth having.',
     thumbnail: '/projects/sarga_motorsport.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/sarga_motorsport.png', '/projects/sarga_motorsport2.png', '/projects/sarga_motorsport3.png'],
     coverImage: '/projects/sarga_motorsport.png',
     category: 'Corporate Website',
     status: 'in-progress',
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     description:
       'The motorsport counterpart to the horse racing site. Same foundation, different identity: the shared primitives carry the structure while the brand layer changes the typography, imagery, and motion. Building the two in parallel is what proved the shared foundation was worth having.',
     thumbnail: '/projects/sarga_rally.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/sarga_rally.png', '/projects/sarga_rally2.png', '/projects/sarga_rally3.png', '/projects/sarga_rally4.png'],
     coverImage: '/projects/sarga_rally.png',
     category: 'Corporate Website',
     status: 'in-progress',
@@ -123,7 +123,7 @@ export const projects: Project[] = [
     description:
       'A dashboard for managing an affiliate programme end to end. Partners register, generate referral links, and track what those links earn; administrators approve accounts and review commission reporting. I built both sides: the React front end and the Node/Express API with Prisma over PostgreSQL, including authentication and the role split between partner and administrator.',
     thumbnail: '/projects/fif.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/fif.png', '/projects/fif2.png'],
     coverImage: '/projects/fif.png',
     category: 'Dashboard',
     status: 'in-progress',
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     description:
       'A booking platform for serviced office spaces. The interesting problem is not the calendar, it is the conflicts: two people reserving the same room in the same minute, cancellations that need to free the slot immediately, and a schedule view that stays correct while other people are booking. I built the reservation flow, the scheduling logic behind it, and the containerised deployment.',
     thumbnail: '/projects/CEO_SUITE_thumbnail.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/CEO_SUITE.png'],
     coverImage: '/projects/CEO_SUITE.png',
     category: 'Booking System',
     status: 'live',
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     description:
       'An HRIS built for internal HR operations: employee records, organisational roles, and the administrative workflows around them. I worked on the front end in Vue 3 with Pinia for state — the hard part of an HRIS interface is that almost every screen is a dense form with permission rules attached, so the component layer has to make those rules obvious rather than hide them.',
     thumbnail: '/projects/aralia_thumbnail.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/aralia.png', '/projects/aralia2.png'],
     coverImage: '/projects/aralia.png',
     category: 'HRIS',
     status: 'live',
@@ -195,7 +195,7 @@ export const projects: Project[] = [
     description:
       'A warehouse system covering inbound and outbound stock, inventory levels, and the procurement workflow around them. Warehouse software lives or dies on data density: operators need many rows on screen at once and cannot afford a mis-click, so the interface work was mostly about tables, keyboard flow, and unambiguous state.',
     thumbnail: '/projects/roda2.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/roda2.png'],
     coverImage: '/projects/roda2.png',
     category: 'Warehouse Management',
     status: 'live',
@@ -216,7 +216,7 @@ export const projects: Project[] = [
     description:
       'A warehouse management system for stock control and day-to-day operational reporting. Built on the same Vue and Laravel stack as the GCU system, which meant patterns established there — table behaviour, form validation, permission handling — carried straight across.',
     thumbnail: thumb('tanito-wms'),
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: [cover('tanito-wms')],
     coverImage: cover('tanito-wms'),
     category: 'Warehouse Management',
     status: 'live',
@@ -237,8 +237,8 @@ export const projects: Project[] = [
     description:
       'A full e-commerce build: product catalogue, cart, checkout, and the order management behind it. I worked across the stack, from the storefront in React to the Node API and the Prisma schema over PostgreSQL. Commerce is unforgiving about state — a cart that disagrees with the server is a lost order — so most of the care went into keeping client and server in agreement.',
     thumbnail: '/projects/aloshop.png',
-    contentImage: ['/projects/sarga.png'],  
-    coverImage: 'projects/aloshop.png',
+    contentImage: ['/projects/aloshop.png', '/projects/aloshop2.png', '/projects/aloshop3.png', '/projects/aloshop4.png'],
+    coverImage: '/projects/aloshop.png',
     category: 'E-Commerce',
     status: 'in-progress',
     featured: false,
@@ -258,7 +258,7 @@ export const projects: Project[] = [
     description:
       'A storefront for a consumer electronics brand: catalogue, product detail, cart, and the order pipeline behind them. Built full stack on React with a Node and Prisma backend, sharing the commerce patterns established on Aloshop rather than starting from scratch.',
     thumbnail: '/projects/simbadda.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/simbadda.png', '/projects/simbadda2.png'],
     coverImage: '/projects/simbadda.png',
     category: 'E-Commerce',
     status: 'in-progress',
@@ -279,7 +279,7 @@ export const projects: Project[] = [
     description:
       'A proof-of-concept membership platform for a shopping mall: member registration, tiers, and the rewards attached to them. The front end had to work for shoppers on a phone in a mall — one hand, poor signal, no patience — which shaped every layout and interaction decision.',
     thumbnail: '/projects/simbadda.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/simbadda.png', '/projects/simbadda2.png'],
     coverImage: '/projects/simbadda.png',
     category: 'Membership',
     status: 'in-progress',
@@ -300,7 +300,7 @@ export const projects: Project[] = [
     description:
       'An e-commerce platform for the automotive market, handling ordering, pricing rules, and inventory. Automotive parts carry compatibility constraints that generic commerce software does not model well, so much of the front-end work was about surfacing those constraints before a customer orders the wrong part.',
     thumbnail: '/projects/roda2.png',
-    contentImage: ['/projects/sarga.png'],  
+    contentImage: ['/projects/roda2.png'],
     coverImage: '/projects/roda2.png',
     category: 'E-Commerce',
     status: 'in-progress',
@@ -321,7 +321,7 @@ export const projects: Project[] = [
   description:
     'A modern corporate website developed for Searah to showcase the company profile, leadership, operations, and strategic partnership between Eni and PETRONAS. I implemented responsive interfaces, optimized performance, and built reusable React components while ensuring the site aligned with the company’s enterprise branding.',
   thumbnail: '/projects/searah_thumbnail.png',
-  contentImage: ['/projects/sarga.png'],  
+  contentImage: ['/projects/searah.png', '/projects/searah2.png', '/projects/searah3.png', '/projects/searah4.png'],
   coverImage: '/projects/searah.png',
   category: 'Corporate Website',
   status: 'live',
@@ -350,7 +350,7 @@ export const projects: Project[] = [
   description:
     'KamiTolong is a service marketplace that connects customers with professional service providers across various categories. Users can browse service listings, compare providers, publish advertisements, and connect directly with businesses or freelancers. I developed the frontend application with a strong focus on responsive design, intuitive navigation, and a seamless user experience.',
   thumbnail: '/projects/kamitolong.png',
-  contentImage: ['/projects/sarga.png'],  
+  contentImage: ['/projects/kamitolong.png', '/projects/kamitolong2.png'],
   coverImage: '/projects/kamitolong.png',
   category: 'Service Marketplace',
   status: 'live',
@@ -376,7 +376,7 @@ export const projects: Project[] = [
   description:
     'An internal enterprise application developed to support operational reporting and business workflows. The project focused on presenting complex business data through dashboards while maintaining performance, usability, and responsive layouts.',
   thumbnail: '/projects/petrokimia.png',
-  contentImage: ['/projects/sarga.png'],  
+  contentImage: ['/projects/petrokimia.png'],
   coverImage: '/projects/petrokimia.png',
   category: 'Enterprise Dashboard',
   status: 'live',
@@ -402,7 +402,7 @@ export const projects: Project[] = [
   description:
     'A responsive corporate website designed to strengthen the company’s digital presence. The project focused on presenting services, company information, and contact channels with a clean and modern interface.',
   thumbnail: '/projects/paska.png',
-  contentImage: ['/projects/sarga.png'],  
+  contentImage: ['/projects/paska.png'],
   coverImage: '/projects/paska.png',
   category: 'Corporate Website',
   status: 'live',
@@ -427,7 +427,7 @@ export const projects: Project[] = [
   description:
     'A web-based enterprise dashboard built to support operational monitoring and internal business processes. The application provides data visualization, reporting features, and responsive interfaces for internal users.',
   thumbnail: '/projects/xl-axiata.png',
-  contentImage: ['/projects/sarga.png'],  
+  contentImage: ['/projects/xl-axiata.png'],
   coverImage: '/projects/xl-axiata.png',
   category: 'Enterprise Dashboard',
   status: 'live',
@@ -452,7 +452,7 @@ export const projects: Project[] = [
   description:
     'A digital ticketing platform allowing users to browse events, purchase tickets, and manage bookings. The application emphasizes smooth checkout flows, responsive UI, and secure transaction handling.',
   thumbnail: '/projects/ticketing.png',
-  contentImage: ['/projects/sarga.png'],  
+  contentImage: ['/projects/ticketing.png'],
   coverImage: '/projects/ticketing.png',
   category: 'Ticketing',
   status: 'in-progress',
@@ -476,9 +476,9 @@ export const projects: Project[] = [
     'Digital top-up platform for games, e-wallets, and prepaid services.',
   description:
     'A web application enabling users to purchase digital products including game vouchers, prepaid credits, and e-wallet top-ups. The project focused on user experience, transaction flow, and responsive interfaces.',
-  thumbnail: '/projects/topup.png',
-  contentImage: ['/projects/sarga.png'],  
-  coverImage: '/projects/topup.png',
+  thumbnail: '/projects/ticketing.png',
+  contentImage: ['/projects/ticketing.png'],
+  coverImage: '/projects/ticketing.png',
   category: 'Digital Commerce',
   status: 'in-progress',
   featured: false,
@@ -502,7 +502,7 @@ export const projects: Project[] = [
   description:
     'A modern corporate website built to showcase company services, strengthen online presence, and provide an engaging user experience across desktop and mobile devices.',
   thumbnail: '/projects/starcom.png',
-  contentImage: ['/projects/sarga.png'],  
+  contentImage: ['/projects/starcom.png', '/projects/starcom2.png', '/projects/starcom3.png', '/projects/starcom4.png'],
   coverImage: '/projects/starcom.png',
   category: 'Corporate Website',
   status: 'live',
