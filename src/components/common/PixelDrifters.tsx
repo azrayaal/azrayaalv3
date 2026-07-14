@@ -17,7 +17,7 @@ const drifters = [
  * without smoothing because every edge lands on a whole coordinate.
  */
 /** function Sprite({ size }: { size: number }) { **/
-function() {
+function Sprite() {
   return (
 /**    <svg
       width={size}
