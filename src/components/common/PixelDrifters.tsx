@@ -16,7 +16,8 @@ const drifters = [
  * Pixel sprite drawn from square units — no external asset, and it scales
  * without smoothing because every edge lands on a whole coordinate.
  */
-function Sprite({ size }: { size: number }) {
+/** function Sprite({ size }: { size: number }) { **/
+function() {
   return (
 /**    <svg
       width={size}
