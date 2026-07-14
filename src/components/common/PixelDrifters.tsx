@@ -16,10 +16,9 @@ const drifters = [
  * Pixel sprite drawn from square units — no external asset, and it scales
  * without smoothing because every edge lands on a whole coordinate.
  */
-/** function Sprite({ size }: { size: number }) { **/
-function Sprite() {
+function Sprite({ size }: { size: number }) { 
   return (
-/**    <svg
+ <svg
       width={size}
       height={size}
       viewBox="0 0 12 12"
@@ -33,13 +32,6 @@ function Sprite() {
       <path d="M4 4h1v2H4V4zM7 4h1v2H7V4z" fill="var(--color-bg)" />
       <path d="M0 3h1v2H0V3zM11 3h1v2h-1V3zM3 11h1v1H3v-1zM8 11h1v1H8v-1z" fill="currentColor" />
     </svg>
-**/
-
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" shape-rendering="crispEdges">
-  <path d="M2 1h8v1H2V1zM2 10h8v1H2v-1zM1 2h1v8H1V2zM10 2h1v8h-1V2z" fill="#EDEDED"/>
-  <path d="M4 4h1v2H4V4zM7 4h1v2H7V4z" fill="#000000"/>
-  <path d="M0 3h1v2H0V3zM11 3h1v2h-1V3zM3 11h1v1H3v-1zM8 11h1v1H8v-1z" fill="#7928CA"/>
-</svg>
   );
 }
 
@@ -78,7 +70,7 @@ export function PixelDrifters({ className }: PixelDriftersProps) {
                 }
           }
         >
-          <Sprite />
+          <Sprite Size{drifters.size}/>
         </motion.div>
       ))}
     </div>
