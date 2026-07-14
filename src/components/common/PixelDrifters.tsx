@@ -70,7 +70,7 @@ export function PixelDrifters({ className }: PixelDriftersProps) {
                 }
           }
         >
-          <Sprite Size{drifters.size}/>
+          <Sprite size{drifters.size}/>
         </motion.div>
       ))}
     </div>
